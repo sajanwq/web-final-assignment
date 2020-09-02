@@ -1,0 +1,36 @@
+{% extends "dashboard-layout.html" %}
+{% block content %}
+
+<div class="table-responsive p-1">
+    <a type="button" class="btn btn-primary mb-2" href="/Admin/create_path/{{i.Id}}">Add user</a>
+    <table class="table table-bordered table-hover table-striped">
+
+     <tr>
+        <th>ID</th>
+        <th>Email_ID</th>
+        <th>Password</th>
+         <th>Action</th>
+     </tr>
+        {% for i in datas %}
+        <tr>
+            <td>{{i.Id}}</td>
+            <td>{{i.Email_ID}}</td>
+            <td>{{i.Password}}</td>
+            <th>
+        <a type="button" class="btn btn-primary" href="/Admin/edit_path/{{i.Id}}">Edit</a>
+        <a type="button" class="btn btn-danger" href="/Admin/delete_path/{{i.Id}}">delete</a>
+            </th>
+        </tr>
+    {% endfor %}
+
+  </table>
+  </div>
+<script type="text/javascript">
+    $(function(){
+    $('.dashboardsidebar').find('.active').removeClass('active');
+     $('#Admin').addClass('active');
+    });
+
+</script>
+
+{% endblock %}

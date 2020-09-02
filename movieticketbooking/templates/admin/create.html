@@ -1,0 +1,25 @@
+{% extends "dashboard-layout.html" %}
+{% block content %}
+<div class="p-4">
+    <a type="button" class="btn btn-primary btn-sm" href="/Admin/retrieve_path/">Back</a>
+    <form method="post" action="/Admin/create_path/">
+    {% csrf_token %}
+       <label for="id_email" class="font-weight-bold">Email ID:</label>
+        <input type="text"  name="Email_ID" class="form-control d-inline" maxlength="200" required="" id="id_email">
+
+        <label for="id_email" class="font-weight-bold ml-2">Password:</label>
+        <input type="text" name="Password" class="form-control d-inline" maxlength="200" required="" id="id_password">
+    <button type="submit" class="btn btn-success mb-1 ml-2">Create</button>
+
+
+ </form>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+    $('.dashboardsidebar').find('.active').removeClass('active');
+     $('#Admin').addClass('active');
+    });
+
+</script>
+{% endblock %}

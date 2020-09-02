@@ -1,0 +1,22 @@
+{% extends "dashboard-layout.html" %}
+{% block content %}
+<div class="p-4">
+    <a type="button" class="btn btn-primary btn-sm mb-3" href="/movies/retrieve_path">back</a>
+<form method="post" class="form-group" action="/movies/update_movie/{{values.Id}}">
+    {% csrf_token %}
+<label for="id_name" class="font-weight-bold" id="lblcs">Movie Name:</label>
+    <input type="text" name="Name" class="form-control form-inline d-inline" id="edtsbmt" placeholder="Enter movie name" maxlength="200" value="{{values.Name}}" id="id_name">
+   <input type="submit" class="btn btn-success  mb-1 mb-1 ml-3"  value="update">
+
+</form>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+    $('.dashboardsidebar').find('.active').removeClass('active');
+     $('#movies').addClass('active');
+    });
+
+</script>
+
+{% endblock %}

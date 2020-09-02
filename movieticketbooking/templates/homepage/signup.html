@@ -1,0 +1,86 @@
+{% extends "alll_css_bootstrap_js.html" %}
+{% block content %}
+{% load static %}
+
+
+
+<body id="signupformbody">
+  <!--creating__________________________________navbar-->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top" >
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapsingnavbar"><i class="fa fa-bars"></i></button>
+     <div class="collapse navbar-collapse" id="collapsingnavbar"> 
+     <a class="navbar-brand nav-tabs" href="/homepage/homepage_render/"> <img src="{% static 'images/logo.jpg' %}" height="50" width="50"  class="rounded-circle" alt="logo"></a>
+       <span class="navbar-text mr-5">MOvieTicket</span>
+
+      <ul class="navbar-nav nav-pills mr-auto">
+          <li class="nav-item"><a class="nav-link" href="/homepage/homepage_render/">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="/movies/moviepage_retrieve/">Movies</a>
+          </li>
+       
+     </ul>
+    <ul class="navbar-nav nav-pills ml-auto">
+         <li class="nav-item"><a class="nav-link" href="/homepage/loginpage_render/">login</a>
+   </li>
+   <li class="nav-item active"><a class="nav-link" href="#">SignUP</a>     
+   </li>
+   </ul>
+   </div>		   
+</nav>
+
+<!--<creating  signup form section-->
+
+  <div class="container-fluid">
+    <div class="row justify-content-center p-5 ">
+      <div class="col-12 col-sm-6 col-md-3">
+        <form class="signupformsection" method="POST" action="">
+               {% csrf_token %}
+             <!-- {{forms}}-->
+
+          <h5> <span style="font-family:arial; padding:5px;margin-left:85px">sign UP</span></h5>
+          <div class="input-group signupinputsec1">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-user fa-2x"></i></span>
+             <input type="email" name="Email" class="form-control py-4" id="signupemail" aria-describedby="emailHelp"  placeholder="Enter email">
+            </div>
+            <span id="eml_err_msg"> </span>
+          </div>
+          <div class="input-group signupinputsec2">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-lock fa-2x"></i></span>
+             <input type="password" name="password" class="form-control py-4" id="signuppassword" placeholder="Password">
+            </div>
+            <span id="pass_err_msg"> </span>
+          </div>
+          <div class="input-group signupinputsec3"> 
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-lock fa-2x"></i></span>
+             <input type="password" class="form-control py-4" id="signupconfirmpassword" placeholder="confirm password">
+            </div>
+            <span id="repass_err_msg"> </span>
+          </div>
+          <button id="signupbutton" type="submit" class="btn btn-success btn-block formbutton signupformbutton">Signup</button>
+            {% if messages %}
+            {% for message in messages %}
+            <div>
+            <p class="text-danger">{{message}}</p>
+            </div>
+            {% endfor %}
+            {% endif %}
+
+        </form>
+     </div>
+  </div>
+</body>
+
+<!-- importing js file -->
+<script src="{% static 'js/customjs/customsignup.js' %}"></script>
+
+{% endblock %}
+ 
+ 
+
+
+
+
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    {% load static %}
+    <!--linking bootsrap css from server site-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <!--using custom css-->
+    <link rel ="stylesheet" type ="text/css" href="{% static 'css/custom.css' %}">
+    <!-- linking font awesome-->
+  <!--  <link rel="stylesheet" href="../fas/cssfont/all.min.css"> -->
+    <!-- linking jqeuery-->
+    <script src="{% static 'js/jquery.js' %}"></script>
+</head>
+<body id="dashboardpagebody">
+     <!--     creatinng  navbar list-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark" >
+
+
+    <a class="navbar-brand nav-tabs" href="/homepage/homepage_render/"> <img src="{% static 'images/logo.jpg' %}" height="50" width="50"  class="rounded-circle" alt="logo"></a>
+    <span class="navbar-text mr-5">MOvieTicket</span>
+     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapsingnavbar"><i class="fa fa-bars"></i></button>
+    <div class="collapse navbar-collapse" id="collapsingnavbar">
+    <ul class="navbar-nav nav-pills ">
+     <!-- <li class="nav-item "><a  type="button" class="nav-link"  data-toggle="collapse" data-target="#tablecollapse">Sidebar</a>
+      </li>-->
+        <li class="nav-item  active"><a class="nav-link" href="#">Dashboard</a>
+        </li>
+    </ul>
+
+          <ul class="navbar-nav nav-pills mx-auto">
+              <li class="nav-item"><a class="nav-link" href="/homepage/homepage_render/">Home</a>
+              </li>
+           </ul>
+
+        <ul class="navbar-nav nav-pills">
+       <li class="nav-item"><a class="nav-link" href="/homepage/loginpage_render/">log Out</a>
+       </li>
+    </ul>
+    </div>
+
+ </nav>
+
+ <!--     creatinng list for dashboard item-->
+
+ <div class="container-fluid">
+  <div class="row">
+    <div class=" col-3 col-md-2 col-lg-2 dashboardsidebar">
+      <h4 class="font-weight-bolder" id="headingtop">Admin dashboard</h4>
+      <ul class="list-group  ullistsection">
+          <li id="Admin" class="list-group-item list-group-item-action active"><a href="/Admin/retrieve_path/">Admin user</a></li>
+        <li  id="customers" class="list-group-item list-group-item-action"><a href="/customers/retrieve_path/">customers</a></li>
+        <li id= "movies" class="list-group-item list-group-item-action"><a href="/movies/retrieve_path/">Movies</a></li>
+          <li id= "bookedmovies" class="list-group-item list-group-item-action"><a href="/Booking/retrieve_path/">Booked movies</a></li>
+      </ul>
+    </div>
+
+
+       <!-- creeating table in th the dashboard-->
+      <div class="col-9 col-md-10 col-lg-10 hellonepal">
+          {% block content %} {% endblock %}
+      </div>
+      </div>
+ </div>
+
+
+
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/slim.min.js' %}"></script>
+</body>
+</html>

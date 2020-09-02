@@ -1,0 +1,25 @@
+{% extends "dashboard-layout.html" %}
+{% block content %}
+<div class="p-4">
+    <a type="button" class="btn btn-primary btn-sm mb-3" href="/Admin/retrieve_path">back</a>
+<form method="POST" class="form-group" action="/Admin/update_path/{{datas.Id}}">
+    {% csrf_token %}
+    <label for="edtsbmt" class="font-weight-bold" id="lblcs">Email_ID:</label>
+    <input type="text"  id="edtsbmt" name="Email_ID" class="form-control form-inline d-inline" placeholder="Enter email" maxlength="200" value="{{datas.Email_ID}}" >
+
+    <label for="pswd" class="font-weight-bold" >Password:</label>
+      <input type="text" name="Password" class="form-control form-inline d-inline" id="pswd" placeholder="Enter password" maxlength="200" value="{{datas.Password}}" >
+   <input type="submit"  class="btn btn-success  mb-1 mb-1 ml-3"  value="update">
+
+</form>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+    $('.dashboardsidebar').find('.active').removeClass('active');
+     $('#Admin').addClass('active');
+    });
+
+</script>
+
+{% endblock %}

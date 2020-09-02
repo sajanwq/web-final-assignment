@@ -1,0 +1,43 @@
+{% extends "dashboard-layout.html" %}
+{% block content %}
+
+<div class="table-responsive p-1">
+<table class="table table-bordered table-hover table-striped">
+
+    <tr>
+        <th>ID</th>
+
+        <th>Tickets</th>
+        <th>Seat Type</th>
+        <th>Theatre</th>
+          <th>Username</th>
+        <th>Email_Id</th>
+        <th>Movies</th>
+         <th>Action</th>
+    </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{i.Id}}</td>
+            <td>{{i.Tickets}}</td>
+            <td>{{i.Seat_Type}}</td>
+            <td>{{i.Theatre}}</td>
+            <td>{{i.Customer_Name}}</td>
+            <td>{{i.Email_ID}}</td>
+            <td>{{i.Movies}}</td>
+            <th>
+        <a type="button" class="btn btn-danger" href="/Booking/delete_book/{{i.Id}}">Delete</a>
+            </th>
+        </tr>
+    {% endfor %}
+
+</table>
+</div>
+<script type="text/javascript">
+    $(function(){
+    $('.dashboardsidebar').find('.active').removeClass('active');
+     $('#bookedmovies').addClass('active');
+    });
+
+</script>
+
+{% endblock %}

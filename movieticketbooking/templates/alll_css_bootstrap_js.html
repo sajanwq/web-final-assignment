@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+       {% load static %}
+    <!--linking bootsrap css from server site-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <!--using custom css-->
+    <link rel ="stylesheet" type ="text/css" href="{% static 'css/custom.css' %}">
+    <!-- linking font awesome-->
+   <link rel="stylesheet" href="{% static 'fonts/cssfont/all.min.css' %}">
+    <!-- linking jqeuery-->
+    <script src="{% static 'js/jquery.js' %}"></script>
+</head>
+
+{% block content%}
+
+
+{% endblock %}
+
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/slim.min.js' %}"></script>
+
+</html>

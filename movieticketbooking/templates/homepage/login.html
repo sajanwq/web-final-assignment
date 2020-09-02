@@ -1,0 +1,67 @@
+{% extends "alll_css_bootstrap_js.html" %}
+{% block content %}
+<body id="loginformbody">
+{% load static %}
+  <!--creating__________________________________navbar-->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top" >
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapsingnavbar"><i class="fa fa-bars"></i></button>
+<div class="collapse navbar-collapse" id="collapsingnavbar"> 
+<a class="navbar-brand nav-tabs" href="/homepage/homepage_render/"> <img src="{% static 'images/logo.jpg' %}" height="50" width="50"  class="rounded-circle" alt="logo"></a>
+<span class="navbar-text mr-5">MOvieTicket</span>
+
+      <ul class="navbar-nav nav-pills mr-auto">
+          <li class="nav-item"><a class="nav-link" href="/homepage/homepage_render/">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="/movies/moviepage_retrieve/">Movies</a>
+          </li>
+      </ul>
+ 
+   
+    <ul class="navbar-nav nav-pills ml-auto ">
+         <li class="nav-item active"><a class="nav-link" href="#">login</a>     
+   </li>
+   <li class="nav-item"><a class="nav-link" href="/customers/signup/">SignUP</a>
+   </li>
+</ul>
+</div>		   
+</nav>
+
+<!--<creating  login form section-->
+
+  <div class="container-fluid">
+    <div class="row justify-content-center p-5 ">
+      <div class="col-12 col-sm-6 col-md-3">
+        <form class="lgnformsection" method="POST" action="#" >
+             {% csrf_token %}
+          <h5> <span style="font-family:arial; padding:5px;margin-left:69px"> Admin login</span></h5>
+          <div class="input-group lgninputsec1">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-user fa-2x"></i></span>
+             <input type="email" name="Email_ID" class="form-control py-4" id="lgn_input_1" aria-describedby="emailHelp" placeholder="Enter email" autocomplete="off">
+            </div>
+            <span id="err_msgemail"></span>
+
+          </div>
+          <div class="input-group lgninputsec2">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-lock fa-2x"></i></span>
+             <input type="password" name="Password" class="form-control py-4" id="lgn_input_2" placeholder="Password" autocomplete="off">
+            </div>
+            <span id="err_msgpassword"></span>
+          </div>
+          <button type="submit" id="lgn_btn" class="btn btn-success btn-block formbutton lgnformbutton">login</button>
+        </form>
+      </div>
+     </div>
+  </div>      
+ 
+ 
+
+
+
+
+
+
+</body>
+<script src="{% static 'js/customjs/customlogin.js' %}"></script>
+{% endblock %}

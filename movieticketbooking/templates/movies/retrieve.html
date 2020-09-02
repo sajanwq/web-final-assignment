@@ -1,0 +1,33 @@
+{% extends "dashboard-layout.html" %}
+{% block content %}
+<div>
+<a type="button" class=" btn btn-primary btn-sm my-2 p-2" href="/movies/add_movie/" >create</a>
+<table class="table table-bordered table-hover table-striped">
+
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+         <th>Action</th>
+
+        {% for i in table_data %}
+        <tr>
+            <td>{{i.Id}}</td>
+            <td>{{i.Name}}</td>
+            <th>
+        <a type="button" class="btn btn-primary" href="/movies/edit_movie/{{i.Id}}">Edit</a>
+        <a type="button" class="btn btn-danger" href="/movies/delete_movie/{{i.Id}}">Delete</a>
+            </th>
+        </tr>
+    {% endfor %}
+
+</table>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+    $('.dashboardsidebar').find('.active').removeClass('active');
+     $('#movies').addClass('active');
+    });
+
+</script>
+{% endblock %}

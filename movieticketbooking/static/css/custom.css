@@ -1,0 +1,223 @@
+
+
+/*css used for----------- mainhomepage*/
+
+#cssforhomepage .fontuser{
+    position:relative
+}
+#cssforhomepage #isearch{
+    position: absolute;
+    left: 183px;
+    top: 22px;}
+
+/*css used for caroussel- background-icons*/
+#cssforhomepage .carousel-control-next-icon, .carousel-control-prev-icon{
+    background-color: blue;}
+
+
+
+/* css used in cards*/
+ hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #fffefe1a
+}
+}
+
+
+
+
+
+#cssforhomepage .modalhomepagebutton h4, button{
+    display: inline-block;
+}
+
+/*css used for ----------moviepage*/
+
+/*css used for caroussel- background-icons*/
+#cssformovies .carousel-control-next-icon, .carousel-control-prev-icon{
+    background-color: blue;}
+
+
+
+/* css used in cards*/
+hr{  margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #fffefe1a;
+}
+
+
+#cssformovies .modalmoviesbutton h4, button{
+    display: inline-block;
+}
+
+
+  
+
+/* css applied for login form*/
+#loginformbody
+{
+    background-image: url('../images/loginimg.png');
+    background-repeat:no-repeat;
+}
+    
+ 
+
+
+#loginformbody .lgnformsection
+{ 
+    background-color: #fff;
+    height: 371px;
+    width: 320px;
+    padding: 30px 30px 30px 30px;
+    box-shadow: 10px 10px 10px #000;
+ 
+}
+
+#loginformbody .loginformsection{
+    font-family:calibri;
+    text-align: left;
+    
+}
+#loginformbody .lgninputsec1{
+    margin-bottom:24px;
+    padding-top:10px;
+}
+#loginformbody .lgnformbutton{
+    margin-top: 50px;
+}
+
+
+/* css applied for signup form*/
+#signupformbody
+{
+    background-image: url('../images/loginimg.png');
+    background-repeat:no-repeat;
+}
+
+
+#signupformbody .signupformsection
+{ 
+    background-color: #fff;
+    height: 458px;
+    width: 320px;
+    padding: 30px 30px 30px 30px;
+    box-shadow: 10px 10px 10px #000;
+ 
+}
+#signupformbody #signupinputsection
+{
+    font-family:calibri;
+    text-align: left;
+    
+}
+
+#signupformbody #signuprepassword
+{
+    font-family:calibri;
+    text-align: left;
+    
+}
+#signupformbody .signupinputsec1
+{
+    margin-bottom:24px;
+    padding-top:10px;
+}
+#signupformbody .signupinputsec3{
+margin-top:20px;
+}
+#signupformbody .signupformbutton
+{
+    margin-top: 50px;
+}
+
+    
+     
+     
+  
+
+
+/*css used in dashboard  sidebarpage*/
+#dashboardpagebody .dashboardsidebar
+{
+height:645px;
+ border-right: 1px solid #cbcbd3;
+ padding-right:0;
+ padding-top:5px
+   }
+#headingtop
+{
+    margin-bottom: 20px;
+    margin-left: 14px;
+}
+
+#dashboardpagebody .ullistsection li
+{
+    height:87px;
+    border-right:0;
+    border-left:0;
+}
+#dashboardpagebody .ullistsection
+{
+height: 350px;
+border: 0;
+}
+
+/*css used in pagination section*/
+#dashboardpagebody .paginationsection{
+    padding-left: 14px;
+    margin-top: -270px;
+
+
+}
+
+/* css applied for booking form*/
+#bookingformbody
+{
+    background-image: url('../images/loginimg.png');
+    background-repeat:no-repeat;
+}
+    
+ 
+/* css applied for booking form*/
+#bookingformbody .form-group
+{
+    background-color: teal;
+    border: 1px solid white;
+    border-radius:20px 20px;
+    padding: 27px;
+    height: 625px;
+    width: 300px;
+}
+
+#bookingformbody label
+{
+    color: white;
+    font-weight:300
+   
+}
+ hr
+{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #fffefe1a
+}
+
+/* css used for form in edit */
+#dashboardpagebody .form-control
+{
+width: 20%;
+}
+
+#dashboardpagebody #lblcs{
+font-size: 25px;
+}
+
+.active a{
+ color:white}
+
+   
+
